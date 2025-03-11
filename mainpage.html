@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="/Practice 2/images/logos/bookstorelogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="mainpage.css">
+    <title>The Book Nook Store</title>
+</head>
+
+<body>
+    <header>
+        <header>
+            <h1 id="display-username">Welcome!</h1>
+        </header>
+        <main>
+            <p>Enjoy exploring the bookstore!</p>
+        </main>
+    
+        <script>
+            // Retrieve the username from sessionStorage
+            const username = sessionStorage.getItem('username');
+            if (username) {
+                // Update the welcome message
+                document.getElementById('display-username').textContent = `Welcome, ${username}`;
+            }
+        </script>
+
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/Practice 2/images/logos/bookstorelogo.png" alt="logo">
+            </div>
+            <div class="navmenu">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><select>CATEGORIES
+                            <option>BROWSE</option>
+                            <option>BUSINESS EBOOK</option>
+                            <option>HEALTH/WELLNESS</option>
+                            <option>HISTORY & POLITICS</option>
+                            <option>NON-FICTION</option>
+                            <option>SPIRITUALITY</option>
+                            <option>MYTHOLOGY</option>
+                            <option>LANGUAGES</option>
+                        </select></li>
+                    <li><a href="#e-books">E-BOOKS</a></li>
+                    <li><a href="/Practice 2/author.html">AUTHORS</a></li>
+                    <li><a href="/Practice 2/about.html">ABOUT</a></li>
+                    <li><a href="/Practice 2/blog.html">BLOG</a></li>
+                </ul>
+                <div class="cart">
+                    <a href="cart.html">
+                        <i class='bx bxs-cart-alt'></i>
+                        <span class="cart-count">0</span> Items |  ₹<span class="cart-total">0</span>
+                    </a>
+                </div>
+                
+                <!-- <div class="cart">
+                    <a href="cart.html">
+                    <i class='bx bxs-cart-alt'></i>
+                </div>     -->
+            </div>
+        </nav>
+
+        <div class="main-header">
+            <div class="image-container">
+                <marquee class="books-slide" scrollamount="10" loop="infinite">
+
+                    <img src="/Practice 2/images/books images/business 1.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/business 2.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/health 1.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/health2.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/history 1.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/history 2.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/political 1.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/poltical 2.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/nonfiction 1.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/nonfiction 2.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/spiritual 1.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/spiritual 2.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/myth 1.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/myth 2.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/lang 1.jpg" style="height: 400px;">
+                    <img src="/Practice 2/images/books images/lang 2.jpg" style="height: 400px;">
+                </marquee>
+            </div>
+        </div>
+        <hr>
+    </header>
+    <div class="container">
+        <header class="search-header">
+            <input type="text" placeholder="Search by Book" class="search-input">
+            <select class="category-dropdown">
+                <option value="">By Category</option>
+                <option value="Astrology">Astrology</option>
+                <option value="Business Ebook">Business Ebook</option>
+                <option value="Health/Wellness">Health/Wellness</option>
+                <option value="History/Politics">History/Politics</option>
+                <option value="Monograph">Monograph</option>
+                <option value="Motivational">Motivational</option>
+                <option value="Mythology">Mythology</option>
+                <option value="Non-fiction">Non-fiction</option>
+                <option value="Biographies">Biographies</option>
+                <option value="Children's Books">Children's Books</option>
+                <option value="Social Science">Social Science</option>
+                <option value="Theatre & Cinema">Theatre & Cinema</option>
+                <option value="Spirituality">Spirituality</option>
+            </select>
+            <select class="author-dropdown">
+                <option value="">By Author</option>
+                <option value="Abdul Kader Mukadam">Abdul Kader Mukadam</option>
+                <option value="Ajay Kalra">Ajay Kalra</option>
+                <option value="Amit Joshi">Amit Joshi</option>
+                <!-- More authors -->
+            </select>
+            <button class="find-book-btn">Find Book</button>
+        </header>
+    </div>
+    <main>
+        <h2 class="new-releases">New Releases</h2>
+
+        <div class="book-list">
+            <!-- Original 6 Books -->
+            <div class="book-item">
+                <img src="/Practice 2/images/new releases/Prayers to ganesha.jpg" alt="Prayers to Ganesha">
+                <h3>Prayers to GANESHA</h3>
+                <p><b>By Sonavi Desai</b></p>
+                <p class="price">₹ 499.00</p>
+                <button class="detail-btn">DETAIL</button>
+                <button class="buy-btn">BUY</button>
+            </div>
+
+            <div class="book-item">
+                <img src="/Practice 2/images/new releases/immortal love.jpg" alt="Immortal Love">
+                <h3>IMMORTAL LOVE</h3>
+                <p><b>By Sulini V. Nair</b></p>
+                <p class="price">₹ 299.00</p>
+                <button class="detail-btn">DETAIL</button>
+                <button class="buy-btn">BUY</button>
+            </div>
+
+            <div class="book-item">
+                <img src="/Practice 2/images/new releases/bombay book.jpg" alt="By-Ways of Bombay">
+                <h3>BY-WAYS OF BOMBAY</h3>
+                <p><b>By S.M. Edwardes</b></p>
+                <p class="price">₹ 499.00</p>
+                <button class="detail-btn">DETAIL</button>
+                <button class="buy-btn">BUY</button>
+            </div>
+
+            <div class="book-item">
+                <img src="/Practice 2/images/new releases/Pasaydan.jpg" alt="Pasayadan">
+                <h3>Pasayadan</h3>
+                <p><b>By Subhash Maharaj Gethe & S.N. Sudharsan</b></p>
+                <p class="price">₹ 200.00</p>
+                <button class="detail-btn">DETAIL</button>
+                <button class="buy-btn">BUY</button>
+            </div>
+
+            <div class="book-item">
+                <img src="/Practice 2/images/new releases/mystery of the hill.jpg" alt="Mystery in the Hills">
+                <h3>Mystery in the Hills</h3>
+                <p><b>By Aryan Joshi</b></p>
+                <p class="price">₹ 450.00</p>
+                <button class="detail-btn">DETAIL</button>
+                <button class="buy-btn">BUY</button>
+            </div>
+
+            <div class="book-item">
+                <img src="/Practice 2/images/new releases/tales of wit and wisdom.jpg" alt="Tales of Wisdom">
+                <h3>Tales of Wisdom</h3>
+                <p><b>By Meera Patel</b></p>
+                <p class="price">₹ 299.00</p>
+                <button class="detail-btn">DETAIL</button>
+                <button class="buy-btn">BUY</button>
+            </div>
+
+            <div class="book-item">
+                <img src="/Practice 2/images/new releases/the legend of forest flowers.jpg"
+                    alt="Legends of the Forests">
+                <h3>Legends of the Forests</h3>
+                <p><b>By Rohan Singh</b></p>
+                <p class="price">₹ 399.00</p>
+                <button class="detail-btn">DETAIL</button>
+                <button class="buy-btn">BUY</button>
+            </div>
+
+            <div class="book-item">
+                <img src="/Practice 2/images/new releases/whispers in the wind.jpg" alt="Whispers of the Wind">
+                <h3>Whispers of the Wind</h3>
+                <p><b>By Neha Verma</b></p>
+                <p class="price">₹ 350.00</p>
+                <button class="detail-btn">DETAIL</button>
+                <button class="buy-btn">BUY</button>
+            </div>
+
+            <div class="book-item">
+                <img src="/Practice 2/images/new releases/journey to the stars.jpg" alt="Journey to the Stars">
+                <h3>Journey to the Stars</h3>
+                <p><b>By Vikram Rao</b></p>
+                <p class="price">₹ 550.00</p>
+                <button class="detail-btn">DETAIL</button>
+                <button class="buy-btn">BUY</button>
+            </div>
+
+            <div class="book-item">
+                <img src="/Practice 2/images/new releases/the dance of minds.jpg" alt="Dance of the Mind">
+                <h3>Dance of the Mind</h3>
+                <p><b>By Kavita Sharma</b></p>
+                <p class="price">₹ 299.00</p>
+                <button class="detail-btn">DETAIL</button>
+                <button class="buy-btn">BUY</button>
+            </div>
+
+            <div class="book-item">
+                <img src="/Practice 2/images/new releases/echoes in the past.jpg" alt="Echoes from the Past">
+                <h3>Echoes from the Past</h3>
+                <p><b>By Anjali Roy</b></p>
+                <p class="price">₹ 400.00</p>
+                <button class="detail-btn">DETAIL</button>
+                <button class="buy-btn">BUY</button>
+            </div>
+
+            <div class="book-item">
+                <img src="/Practice 2/images/new releases/tales of unknown.jpg" alt="Tales of the Unknown">
+                <h3>Tales of the Unknown</h3>
+                <p><b>By Arjun Kumar</b></p>
+                <p class="price">₹ 275.00</p>
+                <button class="detail-btn">DETAIL</button>
+                <button class="buy-btn">BUY</button>
+            </div>
+        </div>
+
+        </div>
+        <div class="popular-books">
+            <h2 class="popular-section">Popular Books</h2>
+
+            <div class="book-list">
+                <div class="book-item">
+                    <img src="/Practice 2/images/new releases/the alchemist.jpg" alt="The Alchemist">
+                    <h3>The Alchemist</h3>
+                    <p><b>By Paulo Coelho</b></p>
+                    <p class="price">₹ 350.00</p>
+                    <button class="detail-btn">DETAIL</button>
+                    <button class="buy-btn">BUY</button>
+                </div>
+
+                <div class="book-item">
+                    <img src="/Practice 2/images/new releases/to kill a mocking bird.jpg" alt="To Kill a Mockingbird">
+                    <h3>To Kill a Mockingbird</h3>
+                    <p><b>By Harper Lee</b></p>
+                    <p class="price">₹ 499.00</p>
+                    <button class="detail-btn">DETAIL</button>
+                    <button class="buy-btn">BUY</button>
+                </div>
+
+                <div class="book-item">
+                    <img src="/Practice 2/images/new releases/george 1984.jpg" alt="1984">
+                    <h3>1984</h3>
+                    <p><b>By George Orwell</b></p>
+                    <p class="price">₹ 399.00</p>
+                    <button class="detail-btn">DETAIL</button>
+                    <button class="buy-btn">BUY</button>
+                </div>
+
+                <div class="book-item">
+                    <img src="/Practice 2/images/new releases/ghastby.jpg" alt="The Great Gatsby">
+                    <h3>The Great Gatsby</h3>
+                    <p><b>By F. Scott Fitzgerald</b></p>
+                    <p class="price">₹ 450.00</p>
+                    <button class="detail-btn">DETAIL</button>
+                    <button class="buy-btn">BUY</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook-f" aria-label="Facebook"></a>
+            <a href="https://www.twitter.com" target="_blank" class="fab fa-twitter" aria-label="Twitter"></a>
+            <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram" aria-label="Instagram"></a>
+            <a href="https://www.linkedin.com" target="_blank" class="fab fa-linkedin-in" aria-label="LinkedIn"></a>
+        </div>
+
+        <div class="footer-content">
+
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <a href="#ebooks">E-Books</a>
+                <a href="/Practice 2/author.html">Authors</a>
+                <a href="/Practice 2/about.html">About</a>
+                <a href="/Practice 2/blog.html">Blog</a>
+            </div>
+
+
+            <div class="footer-section contact-info">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:info@bookstore.com">info@bookstore.com</a></p>
+
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 bookstore. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="mainpage.js"></script>
+</body>
+
+</html>
